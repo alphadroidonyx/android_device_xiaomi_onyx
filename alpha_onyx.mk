@@ -7,13 +7,26 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit_only.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common AlphaDroid stuff.
+$(call inherit-product, vendor/alpha/config/common_full_phone.mk)
 
 # Inherit from onyx device
 $(call inherit-product, device/xiaomi/onyx/device.mk)
 
-PRODUCT_NAME := lineage_onyx
+# AlphaDroid Build Flags
+TARGET_HAS_UDFPS := true
+TARGET_BUILD_PACKAGE := 1
+TARGET_ENABLE_BLUR := true
+WITH_ADB_INSECURE := false
+TARGET_INCLUDE_MATLOG := false
+TARGET_EXCLUDES_AUDIOFX := true
+TARGET_INCLUDE_SIMPLE_TUNE := false
+TARGET_FACE_UNLOCK_SUPPORTED := true
+
+# Maintainer
+ALPHA_MAINTAINER := Sachin_07
+
+PRODUCT_NAME := alpha_onyx
 PRODUCT_DEVICE := onyx
 PRODUCT_MANUFACTURER := Xiaomi
 PRODUCT_BRAND := POCO
