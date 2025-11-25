@@ -15,7 +15,7 @@ $(call inherit-product, device/xiaomi/onyx/device.mk)
 
 # AlphaDroid Build Flags
 TARGET_HAS_UDFPS := true
-TARGET_BUILD_PACKAGE := 1
+TARGET_BUILD_PACKAGE := 3
 TARGET_ENABLE_BLUR := true
 WITH_ADB_INSECURE := false
 TARGET_INCLUDE_MATLOG := false
